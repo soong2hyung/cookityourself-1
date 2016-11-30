@@ -2,11 +2,8 @@
 
 import sys
 from urllib import quote, unquote
-import csv
-import requests
 import urllib2
 from bs4 import BeautifulSoup
-
 
 def crawling_homeplus_main(keyword):
     item_list = []
