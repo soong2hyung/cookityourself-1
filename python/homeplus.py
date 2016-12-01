@@ -51,8 +51,12 @@ def main(argv):
 
     f = open(filename, 'w')
     for item in item_list:
+        data = ""
         for ob in item:
-            f.write(str(unicode(ob).encode("utf-8")) + ",")
+            data += str(unicode(ob).encode("utf-8")) + ","
+        data = data[:-1]
+        f.write(data)
+        f.write("\n")
 
     f.close()
 
