@@ -155,6 +155,8 @@
 				$row = mysql_fetch_row($result);
 				$total_no = $row[0];
 
+				if ( $total_no > 100 ) die();
+
 				//5.2 실제 검색
 				$result = mysql_query($query);
 
@@ -174,7 +176,7 @@
 					printf("</div>\n");
 					printf("<div class=\"col-xs-8 col-sm-8\">\n");
 						printf("<h3>%s</h3>\n", $name);
-						printf("<h5>%s</h5>",$elements);
+						printf("<h5>%s</h5>",$category);
 					printf("</div>\n");
 
 				}
