@@ -1,0 +1,99 @@
+<script>
+	$(function () {
+	  var trigger = $('.hamburger'),
+		  overlay = $('.overlay'),
+		 isClosed = false;
+
+		trigger.click(function () {
+		  hamburger_cross();      
+		});
+
+		function hamburger_cross() {
+
+		  if (isClosed == true) {          
+			overlay.hide();
+			trigger.removeClass('is-open');
+			trigger.addClass('is-closed');
+			isClosed = false;
+		  } else {   
+			overlay.show();
+			trigger.removeClass('is-closed');
+			trigger.addClass('is-open');
+			isClosed = true;
+		  }
+	  }
+	  
+	  $('[data-toggle="offcanvas"]').click(function () {
+			$('#wrapper').toggleClass('toggled');
+	  });  
+	});
+</script>
+<nav id="mainNav" class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+				<span class="hamb-top"></span>
+				<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+			</button>
+		</div>
+		<a class="glyphicon glyphicon-user" href="./login.html" style="color: #fff; font-size: 27px; float: right; margin-top: 25px">
+		</a>
+		<br/>
+		<br/> 
+		<br/>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div align="center">
+			<ul class="nav navbar-nav navbar">
+				<li>
+					<a class="page-scroll" href="./index.html">홈</a>
+				</li>
+				<li>
+					<a class="page-scroll" href="./recipe.html">레시피</a>
+				</li>
+				<li>
+					<a class="page-scroll" href="./recommend.html">추천</a>
+				</li>
+				<li>
+					<a class="page-scroll" href="./popular.html">인기</a>
+				</li>
+				<li>
+					<a class="page-scroll" href="./subject.html">주제</a>
+				</li>
+			</ul>
+		</div>
+	 </div> 
+		<!-- /.navbar-collapse -->
+	<!-- /.container-fluid -->
+</nav>
+
+<!-- Sidebar -->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+	<ul class="nav sidebar-nav">
+		<li class="sidebar-brand">
+			<a href="./index.html">
+			   COOK IT YOURSELF
+			</a>
+		</li>
+		<br/>
+		<li>
+		</li>
+		<li>
+				<a class="page-scroll" href="./index.html">홈</a>
+		</li>
+		<li>
+			<a class="page-scroll" href="./recipe.html">레시피</a>
+		</li>
+		<li>
+			<a class="page-scroll" href="./recommend.html">추천</a>
+		</li>
+		<li>
+			<a class="page-scroll" href="./popular.html">인기</a>
+		</li>
+		<li>
+			<a class="page-scroll" href="./subject.html">주제별</a>
+		</li>
+	</ul>
+</nav>
+<!-- /#sidebar-wrapper -->
