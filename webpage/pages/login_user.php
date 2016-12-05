@@ -31,23 +31,26 @@ $connect = @mysql_connect($mysql_hostname.':'.$mysql_port, $mysql_username, $mys
 mysql_query(' SET NAMES '.$mysql_charset);
 
 //4. 쿼리 생성
+$query = "SELECT Password FROM User WHERE Id LIKE '".$_GET[Id]."'";
 
-
-# $query = ' select \'complete\' as col from dual ';
-
-$data_stream = "'".$_GET['Id']."','".$_GET['Password']."','".$_GET['Name']."','".$_GET['Email']."', '', ''";
-$query = "insert into User(Id, Password, Name, Email, SearchRecode, BuyRecode) values (".$data_stream.")";
-
-// $echo (string)$query;
+// echo $query;
 
 //5. 쿼리 실행
 $result = mysql_query($query);
 
-//6. 결과 처리
-if($result)
+$row = mysql_fetch_array($result, MYSQL_NUM);
+
+
+if ( !empty($row) && ( $row[0] == $_GET[Password] ) ) {
+
+	// 로그인 성공
+	session_start();
+	$_SESSION['userID'] == $_GET[Id];
 	echo "1";
+} 
 else
 	echo "-1";
+
 // 연결 종료
 mysql_close($connect);
 

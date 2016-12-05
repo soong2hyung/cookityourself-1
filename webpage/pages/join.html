@@ -128,10 +128,11 @@
 	                        var str = request.responseText;
 	                        if (str == "1") {
 	                        	alert("회원가입에 성공했습니다.");
-							sleep(5);
-							header('Location: http://cookityourself.ivyro.net');
+								//sleep(5);
+								location.replace("http://cookityourself.ivyro.net");
 	                        }
 	                        else {
+								
 	                            alert("회원가입에 실패했습니다.");
 	                        }
 	                    }
