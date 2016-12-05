@@ -57,6 +57,12 @@
 					<a class="page-scroll" href="./recipe.html">레시피</a>
 				</li>
 				<li>
+					<a class="page-scroll" href=",/recommend.html">추천</a>
+				</li>
+				<li>
+					<a class="page-scroll" href="./popular.html">인기</a>
+				</li>
+				<li>
 					<a class="page-scroll" href="./subject.html">주제</a>
 				</li>
 				</ul>
@@ -105,7 +111,7 @@
 		</div>
 	
 		<div class="container-fluid">
-			<!-- <div class="row no-gutter popup-gallery"> -->
+			<div class="row no-gutter popup-gallery">
 
 				<?php 
 
@@ -163,23 +169,21 @@
 					$elements =	$row[4];
 					$category =	$row[5];
 
-					printf("<div class=\"row no-gutter popup-gallery\">");
-						printf("<div class=\"col-xs-4 col-sm-4\">\n");
-							printf("<a href=\"%s\">\n", $url);
-								printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">\n", $img_url);
-							printf("</a>\n");
-						printf("</div>\n");
-						printf("<div class=\"col-xs-8 col-sm-8\">\n");
-							printf("<h3>%s</h3>\n", $name);
-							printf("<h5>%s</h5>",$category);
-						printf("</div>\n");
+					printf("<div class=\"col-xs-4 col-sm-4\">\n");
+						printf("<a href=\"%s\">\n", $url);
+							printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">\n", $img_url);
+						printf("</a>\n");
+					printf("</div>\n");
+					printf("<div class=\"col-xs-8 col-sm-8\">\n");
+						printf("<h3>%s</h3>\n", $name);
+						printf("<h5>%s</h5>",$category);
 					printf("</div>\n");
 
 				}
 
 				?>
 
-			<!-- </div> -->
+			</div>
 		</div>
 
 	</section>
