@@ -52,6 +52,11 @@
 				<hr />
 			</div>
 		</div> 
+
+		<?php
+		session_start();
+		?>
+
 		<div class="main-login main-center">
 			<form class="form-horizontal" method="get">					
 				<div class="form-group">
@@ -59,7 +64,9 @@
 					<div class="cols-sm-10">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-							<input type="text" readonly class="form-control" name="User" id="User" placeholder="leess">
+							<?php  
+							printf("<input type=\"text\" readonly class=\"form-control\" name=\"Id\" id=\"Id\" value=\"%s\">", $_SESSION['user_id']);
+							?>
 						</div>
 					</div>
 				</div>
@@ -69,7 +76,9 @@
 					<div class="cols-sm-10">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-							<input type="text" readonly class="form-control" name="Email" id="Email"  placeholder="leess@skku.edu"/>
+							<?php  
+							printf("<input type=\"text\" class=\"form-control\" name=\"Email\" id=\"Email\"  value=\"%s\"/>", $_SESSION['user_email']);
+							?>
 						</div>
 					</div>
 				</div>
@@ -79,13 +88,15 @@
 					<div class="cols-sm-10">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-							<input type="text" readonly class="form-control" name="Name" id="Name"  placeholder="닉네임을 입력해 주세요."/>
+							<?php 
+							printf("<input type=\"text\" class=\"form-control\" name=\"Name\" id=\"Name\"  value=\"%s\"/>", $_SESSION['user_name']);
+							 ?>
 						</div>
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="password" class="cols-sm-2 control-label">검색기록</label>
+					<label for="password" class="cols-sm-2 control-label">비밀번호</label>
 					<div class="cols-sm-10">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
@@ -95,7 +106,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="confirm" class="cols-sm-2 control-label">구매기록</label>
+					<label for="confirm" class="cols-sm-2 control-label">비밀번호 확인</label>
 					<div class="cols-sm-10">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
@@ -105,7 +116,7 @@
 				</div>
 
 				<div class="form-group ">
-					<button type="button" class="btn btn-primary btn-lg btn-block login-button" onclick="RegisterUser()">수정하기</button>
+					<button type="button" class="btn btn-primary btn-lg btn-block login-button" onclick="EditUser()">수정하기</button>
 				</div>
 				<div class="login-register">
 					<a href="./index.php">메인 화면으로</a>
@@ -115,24 +126,26 @@
 	</div>
 	<div id="footer"></div>
 	<script>
-	    function RegisterUser() {
+	    function EditUser() {
 	        if (document.getElementById("Password").value == document.getElementById("Password2").value) {
 	            var request = new XMLHttpRequest();
-	            var params = "?Id=" + document.getElementById("Id").value + "&Password=" + document.getElementById("Password").value
+	            var params = "?Id=" + <? echo '"'.$_SESSION['user_id'].'"' ?> + "&Password=" + document.getElementById("Password").value
 	                + "&Name=" + document.getElementById("Name").value + "&Email=" + document.getElementById("Email").value;
 	 
-	            request.open("GET", "register_user.php" + params, true);
+	            request.open("GET", "edit_user.php" + params, true);
 	            request.onreadystatechange = function () {
 	                if (request.readyState == 4) { //서버로부터 응답상태
 	                    if (request.status == 200 || request.status == 0) {//200 : 웹 서버의 응답처리상태
 	                        var str = request.responseText;
+
+							alert(str);
+
 	                        if (str == "1") {
-	                        	alert("회원가입에 성공했습니다.");
-							sleep(5);
-							header('Location: http://cookityourself.ivyro.net');
+	                        	alert("정보수정에 성공했습니다.");
+							location.replace("http://cookityourself.ivyro.net");
 	                        }
 	                        else {
-	                            alert("회원가입에 실패했습니다.");
+	                            alert("정보수정에 실패했습니다.");
 	                        }
 	                    }
 	                }
