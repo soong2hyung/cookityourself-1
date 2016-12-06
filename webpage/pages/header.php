@@ -45,20 +45,20 @@
 		<br/>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div align="center">
-			<ul class="nav navbar-nav navbar">
-				<li>
+			<ul class="nav navbar-nav navbar" width="100%">
+				<li width="20%">
 					<a class="page-scroll" href="./index.php">홈</a>
 				</li>
-				<li>
+				<li width="20%">
 					<a class="page-scroll" href="./recipe.php">레시피</a>
-				</li>
-				<li>
+				</li >
+				<li width="20%">
 					<a class="page-scroll" href="./recommend.php">추천</a>
 				</li>
-				<li>
+				<li width="20%">
 					<a class="page-scroll" href="./popular.php">인기</a>
 				</li>
-				<li>
+				<li width="20%">
 					<a class="page-scroll" href="./subject.php">주제</a>
 				</li>
 			</ul>
