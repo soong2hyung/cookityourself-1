@@ -272,6 +272,8 @@
 			</div>
 		</div>
 
+		<!-- 주석1 -->
+
 		</br></br>
 		<h3 align="left">레시피 링크<h3>
 		<?php printf("<h5><a href=\"%s\" align=\"left\">%s</a></h5>", $url,$url); ?>
