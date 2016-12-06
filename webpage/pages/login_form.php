@@ -36,8 +36,8 @@
 	<script src="../js/creative.min.js"></script>
 	<script> 
 		$(function(){
-			$("#header").load("header.html"); 
-			$("#footer").load("footer.html"); 
+			$("#header").load("header.php"); 
+			$("#footer").load("footer.php"); 
 		});
 	</script>
 </head>
@@ -78,7 +78,7 @@
 					<button type="button" class="btn btn-primary btn-lg btn-block login-button" onclick="logUser()" >로그인 하기</button>
 				</div>
 				<div class="login-register">
-					<a href="./join.html">가입하기</a>
+					<a href="./join.php">가입하기</a>
 				 </div>
 			</form>
 		</div>
