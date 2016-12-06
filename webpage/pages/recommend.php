@@ -36,8 +36,8 @@
 	<script src="../js/creative.min.js"></script>
 	<script> 
 		$(function(){
-			$("#header").load("header.html"); 
-			$("#footer").load("footer.html"); 
+			$("#header").load("header.php"); 
+			$("#footer").load("footer.php"); 
 		});
 	</script>
 </head>
@@ -45,21 +45,8 @@
 <div id="wrapper">
 	<div class="overlay"></div>
 	<div id="header"></div>
-	<section class="no-padding" id="searchbar">
-		<div class="container">
-			<h2 class="section-heading" align="center"></h2>
-			<div class="col-sm-6 col-sm-offset-3">
-				<div class="input-group stylish-input-group">
-					<input type="text" class="form-control"  placeholder="레시피 검색" >
-					<span class="input-group-addon">
-						<button type="submit">
-							<span class="glyphicon glyphicon-search"></span>
-						</button>  
-					</span>
-				</div>
-			</div>
-		</div>
-		<br/><br/>
+	<section class="no-padding" id="slider" style="padding-top: 80px;">>
+		<br/>
 	</section>
 
 	<section class="no-padding" id="recommend">
@@ -72,19 +59,118 @@
 		</div>
 	
 		<div class="container-fluid">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<h2 class="section-heading"></h2>
-				</div>
-			</div>
-		</div>
-	
-		<div class="container-fluid" padding-top="40px">
-			<div class="col-xs-12 col-sm-12 no-padding">
-				<div class="col-xs-4 col-sm-4 no-padding">
+			<div class="row no-gutter popup-gallery">
+				<div class="col-xs-4 col-sm-4">
 					<a href="http://www.naver.com">
-						<img src="../img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-xs-8 col-sm-8">
+					<h3>냉면</h3>
+					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://www.naver.com">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
 					</a>
 				</div>
 				<div class="col-xs-8 col-sm-8">
@@ -92,76 +178,10 @@
 					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-12 no-padding">
-				<div class="col-xs-4 col-sm-4 no-padding">
-					<a href="http://www.naver.com">
-						<img src="../img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-xs-8 col-sm-8">
-					<h3>냉면</h3>
-					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 no-padding">
-				<div class="col-xs-4 col-sm-4 no-padding">
-					<a href="http://www.naver.com">
-						<img src="../img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-xs-8 col-sm-8">
-					<h3>냉면</h3>
-					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 no-padding">
-				<div class="col-xs-4 col-sm-4 no-padding">
-					<a href="http://www.naver.com">
-						<img src="../img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-xs-8 col-sm-8">
-					<h3>냉면</h3>
-					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 no-padding">
-				<div class="col-xs-4 col-sm-4 no-padding">
-					<a href="http://www.naver.com">
-						<img src="../img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-xs-8 col-sm-8">
-					<h3>냉면</h3>
-					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 no-padding">
-				<div class="col-xs-4 col-sm-4 no-padding">
-					<a href="http://www.naver.com">
-						<img src="../img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-xs-8 col-sm-8">
-					<h3>냉면</h3>
-					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 no-padding">
-				<div class="col-xs-4 col-sm-4 no-padding">
-					<a href="http://www.naver.com">
-						<img src="../img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-					</a>
-				</div>
-				<div class="col-xs-8 col-sm-8">
-					<h3>냉면</h3>
-					<h5>연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩</h4>
-				</div>
-			</div>
-		</div>
 	</section>
+
 	<div id="footer"></div>
-	<div>
+<div>
 </body>
 
 </html>

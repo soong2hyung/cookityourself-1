@@ -36,8 +36,8 @@
 	<script src="../js/creative.min.js"></script>
 	<script> 
 		$(function(){
-			$("#header").load("header.html"); 
-			$("#footer").load("footer.html"); 
+			$("#header").load("header.php"); 
+			$("#footer").load("footer.php"); 
 		});
 	</script>
 </head>
@@ -108,7 +108,7 @@
 					<button type="button" class="btn btn-primary btn-lg btn-block login-button" onclick="RegisterUser()">가입하기</button>
 				</div>
 				<div class="login-register">
-					<a href="./login.html">로그인 하기</a>
+					<a href="./login.php">로그인 하기</a>
 				 </div>
 			</form>
 		</div>
@@ -128,10 +128,11 @@
 	                        var str = request.responseText;
 	                        if (str == "1") {
 	                        	alert("회원가입에 성공했습니다.");
-							sleep(5);
-							header('Location: http://cookityourself.ivyro.net');
+								//sleep(5);
+								location.replace("http://cookityourself.ivyro.net");
 	                        }
 	                        else {
+								
 	                            alert("회원가입에 실패했습니다.");
 	                        }
 	                    }
