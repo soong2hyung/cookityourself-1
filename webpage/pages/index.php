@@ -91,7 +91,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid green">
+		<div class="container-fluid orange">
 			<div class="row no-gutter popup-gallery">
 				<div class="col-xs-4 col-sm-4">
 					<h4>Today</h4>
