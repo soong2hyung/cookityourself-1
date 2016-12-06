@@ -203,8 +203,8 @@
 				$name     = $row[1];
 				$url      = $row[2];
 				$img_url  = $row[3];
-				$elements =	$row[4];
-				$category =	$row[5];
+				$elements =	str_replace(";", ", ", $row[4]);
+				$category =	str_replace(";", ", ", $row[5]);
 
 				printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
 					printf("<div class=\"col-xs-4 col-sm-4 no-padding\">\n");
@@ -257,8 +257,8 @@
 				$name     = $row[1];
 				$url      = $row[2];
 				$img_url  = $row[3];
-				$elements =	$row[4];
-				$category =	$row[5];
+				$elements =	str_replace(";", ", ", $row[4]);
+				$category =	str_replace(";", ", ", $row[5]);
 
 				printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
 					printf("<div class=\"col-xs-4 col-sm-4 no-padding\">\n");

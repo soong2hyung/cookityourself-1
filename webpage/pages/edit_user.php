@@ -32,10 +32,6 @@ mysql_query(' SET NAMES '.$mysql_charset);
 
 //4. 쿼리 생성
 
-$query  = "update User set Password= '".$_GET['Password']."' where Id LIKE '".$_GET['Id']."'";
-
-$query  = "update User set Password= '".$_GET['Password']."', Name = '".$_GET['Name']."', Email = '".$_GET['Email']."' where Id LIKE '".$_GET['Id']."'";
-
 $query  = "update User set Password= '".$_GET['Password']."', Name = '".$_GET['Name']."', Email = '".$_GET['Email']."' where Id LIKE '".$_GET['Id']."'";
 
 

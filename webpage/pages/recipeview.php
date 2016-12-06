@@ -80,6 +80,12 @@
 		$lottemart_info;
 		$lottemart_info2;
 
+		$total_home1;
+		$total_home2;
+
+		$total_lottemart1;
+		$total_lottemart2;
+
 		while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 
 			$id       = $row[0];
@@ -136,15 +142,17 @@
 
 					// $home_info[] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
 					$home_info[$i][$k] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
-
-
 				}
 
-
 				fclose($fp);
-
 				unlink($textfile);
 			}
+
+			$total_home1[0] = 0;
+			for ($i=0; $i < count($home_info); $i++) { 
+				$total_home1[0] = $total_home1[0] + intval($home_info[$i][0][4]);
+			}
+
 		}
 
 		function load_homeplus2() { 
@@ -175,12 +183,17 @@
 					}
 
 					$home_info2[$i][$k] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
-					 
+
 				}
 
 				fclose($fp);
 
 				unlink($textfile);
+			}
+
+			$total_home2[0] = 0;
+			for ($i=0; $i < count($home_info2); $i++) { 
+				$total_home2[0] = $total_home2[0] + intval($home_info2[$i][0][4]);
 			}
 		}
 
@@ -211,12 +224,15 @@
 					}
 
 					$lottemart_info[$i][$k] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
-					 
 				}
 
 				fclose($fp);
-
 				unlink($textfile);
+			}
+
+			$total_lottemart1[0] = 0;
+			for ($i=0; $i < count($lottemart_info); $i++) { 
+				$total_lottemart1[0] = $total_lottemart1[0] + intval($lottemart_info[$i][0][4]);
 			}
 		}
 
@@ -247,12 +263,17 @@
 					}
 
 					$lottemart_info2[$i][$k] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
-					 
+				 
 				}
 
 				fclose($fp);
 
 				unlink($textfile);
+			}
+
+			$total_lottemart2[0] = 0;
+			for ($i=0; $i < count($lottemart_info2); $i++) { 
+				$total_lottemart2[0] = $total_lottemart2[0] + intval($lottemart_info2[$i][0][4]);
 			}
 		}
 		python_run();
@@ -271,15 +292,7 @@
 				<?php printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">", $img_url); ?>
 			</div>
 		</div>
-<<<<<<< HEAD
-		<!-- HELLO -->
-		
-		
-=======
 
-		<!-- 주석1 -->
-
->>>>>>> d91f48f6d9e670e2dcf9cb56a5db713f51b885f3
 		</br></br>
 		<h3 align="left">레시피 링크<h3>
 		<?php printf("<h5><a href=\"%s\" align=\"left\">%s</a></h5>", $url,$url); ?>
@@ -296,7 +309,7 @@
 
 		</br></br>
 		<h3 align="left">쇼핑몰-롯데마트몰 인기품목 구매 정보<h3><br>
-		<h3>총합 <?php echo $total_lottemart1[0] ?> 원</h3><br>
+		<h3 id="lottemart1_total" >총합 <?php echo $total_lottemart1[0] ?> 원</h3><br>
 		<div class="container-fluid">
 				<?php 
 
@@ -316,8 +329,16 @@
 						printf("<div class=\"col-xs-7 col-sm-7\">\n");
 
 							printf("<h4>%s</h4>", $lottemart_info[$i][0][3]);
-							printf("<h3>%s 원</h3>", $lottemart_info[$i][0][4]);
+							printf("<h3 id=\"item_home1_%d\">%s 원</h3>", $i, $lottemart_info[$i][0][4]);
+
 						printf("</div>\n");
+
+						printf("<div class=\"col-xs-2 col-sm-2\">\n");
+
+							printf("<input type=\"checkbox\" name=\"\" value=\"\">");
+							
+						printf("</div>\n");
+
 					printf("</div>\n");
 				}
 
@@ -326,7 +347,7 @@
 
 		</br></br>
 		<h3 align="left">쇼핑몰-롯데마트몰 최저가 구매 정보<h3><br>
-		<h3>총합 <?php echo $total_lottemart2[0] ?> 원</h3><br>
+		<h3 id="lottemart2_total" >총합 <?php echo $total_lottemart2[0] ?> 원</h3><br>
 		<div class="container-fluid">
 				<?php 
 
@@ -357,7 +378,7 @@
 
 		</br></br>
 		<h3 align="left">쇼핑몰-홈플러스 인기품목 구매 정보<h3><br>
-		<h3>총합 <?php echo $total_home1[0] ?> 원</h3><br>
+		<h3 id="home1_total">총합 <?php echo $total_home1[0] ?> 원</h3><br>
 		<div class="container-fluid">
 				<?php 
 
@@ -387,7 +408,7 @@
 
 		</br></br>
 		<h3 align="left">쇼핑몰-홈플러스 최저가 구매 정보<h3><br>
-		<h3><?php echo $total_home2[0] ?> 원</h3><br>
+		<h3 id="home2_total"><?php echo $total_home2[0] ?> 원</h3><br>
 		<div class="container-fluid">
 				<?php 
 
