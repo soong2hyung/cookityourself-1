@@ -38,7 +38,7 @@
 				<span class="hamb-bottom"></span>
 			</button>
 		</div>
-		<a class="glyphicon glyphicon-user" href="./login.php" style="color: #fff; font-size: 27px; float: right; margin-top: 25px">
+		<a class="glyphicon glyphicon-user" href="./login.html" style="color: #fff; font-size: 27px; float: right; margin-top: 25px">
 		</a>
 		<br/>
 		<br/> 
@@ -47,19 +47,19 @@
 		<div align="center">
 			<ul class="nav navbar-nav navbar">
 				<li>
-					<a class="page-scroll" href="./index.php">홈</a>
+					<a class="page-scroll" href="./index.html">홈</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="./recipe.php">레시피</a>
+					<a class="page-scroll" href="./recipe.html">레시피</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="./recommend.php">추천</a>
+					<a class="page-scroll" href="./recommend.html">추천</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="./popular.php">인기</a>
+					<a class="page-scroll" href="./popular.html">인기</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="./subject.php">주제</a>
+					<a class="page-scroll" href="./subject.html">주제</a>
 				</li>
 			</ul>
 		</div>
@@ -73,32 +73,47 @@
 	<ul class="nav sidebar-nav">
 		<li class="sidebar-brand">
 			<!-- User info -->
-			<a href="./index.php">
+			<a href="./index.html">
 			   COOK IT YOURSELF
 			</a>
-			<h5>이은석님 안녕하세요!</h5>
-			<h5>leess@skku.edu</h5>
-			<a href="./userinfo.php" class="no-padding">
-				<button type="button" class="btn btn-warning btn-sm">My info</button>
-			</a>
+			<?php
+			session_start();
+			if ( !isset($_SESSION['user_id']) ) {
+				//echo '로그인 하셈';
+			}
+			else {
+
+				printf("<a><h5 class=\"no-padding\" >%s님 안녕하세요!<br>", $_SESSION['user_name']);
+				printf("%s</h5></a>", $_SESSION['user_email'] );
+				printf("<a href=\"./userinfo.html\" class=\"no-padding\">");
+					printf("<button type=\"button\" class=\"btn btn-warning btn-sm\">My info</button>");
+				printf("</a>");
+
+				printf("<a href=\"./logout.php\">");
+					printf("<button type=\"button\" class=\"btn btn-warning btn-sm\">로그아웃</button>");
+					//printf("<h5>로그아웃</h5>");
+				printf("</a>");
+			}
+			?>
+
 			<br/>
 			<!-- User info -->
 		</li>
 		<br/>
 		<li>
-			<a class="page-scroll" href="./index.php">홈</a>
+			<a class="page-scroll" href="./index.html">홈</a>
 		</li>
 		<li>
-			<a class="page-scroll" href="./recipe.php">레시피</a>
+			<a class="page-scroll" href="./recipe.html">레시피</a>
 		</li>
 		<li>
-			<a class="page-scroll" href="./recommend.php">추천</a>
+			<a class="page-scroll" href="./recommend.html">추천</a>
 		</li>
 		<li>
-			<a class="page-scroll" href="./popular.php">인기</a>
+			<a class="page-scroll" href="./popular.html">인기</a>
 		</li>
 		<li>
-			<a class="page-scroll" href="./subject.php">주제별</a>
+			<a class="page-scroll" href="./subject.html">주제별</a>
 		</li>
 	</ul>
 </nav>

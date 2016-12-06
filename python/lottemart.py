@@ -20,7 +20,10 @@ def crawling_lottemart_main(keyword):
         try:
             img_url = list.img["src"]
             id = list.a["onclick"]
-            id = id[43:56]
+            id = id.split(",")
+            id = id[1].replace(" ", "")
+            id = id.replace("'", "")
+            #print id
             site_url = "http://www.lottemart.com/product/ProductDetail.do?ProductCD=" + id
             title = list.find("p", {"class": "prod-name"}).text
             price = list.find("p", {"class": "price-max"})

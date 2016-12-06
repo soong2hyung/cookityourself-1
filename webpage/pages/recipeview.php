@@ -36,7 +36,7 @@
 	<script src="../js/creative.min.js"></script>
 	<script> 
 		$(function(){
-			$("#header").load("header.html"); 
+			$("#header").load("header.php"); 
 			$("#footer").load("footer.html"); 
 		});
 	</script>
@@ -80,12 +80,6 @@
 		$lottemart_info;
 		$lottemart_info2;
 
-		$total_home1=0;
-		$total_home2=0;
-
-		$total_lottemart1=0;
-		$total_lottemart2=0;
-
 		while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 
 			$id       = $row[0];
@@ -119,19 +113,33 @@
 
 			for ($i=0; $i < count($element_list); $i++) { 
 				$textfile = sprintf("homeplus_인기_%s.txt", $element_list[$i]);
-				$fp = fopen($textfile,"r");
-				$doc_data = fgets($fp,1024);
 
-				if ( $doc_data == '' ) { 
-					unlink($textfile);
-					continue;
+				$fp = fopen($textfile,"r");
+
+				// 첫번 째 줄 읽어 개수 파악하기
+				$line_num = fgets($fp,1024);
+
+				for ($k=0; $k < intval($line_num); $k++) { 
+
+					$doc_data = fgets($fp,1024);
+
+					if ( $doc_data == '' ) { 
+						unlink($textfile);
+						continue;
+					}
+
+					$aaaa = explode(",", $doc_data);
+
+					if ( count($aaaa) != 5 ) { 
+						continue;
+					}
+
+					// $home_info[] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
+					$home_info[$i][$k] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
+
+
 				}
 
-				$aaaa = explode(",", $doc_data);
-
-				$home_info[] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
-
-				$total_home1 = $total_home1 + intval($aaaa[4]);
 
 				fclose($fp);
 
@@ -145,19 +153,30 @@
 
 			for ($i=0; $i < count($element_list); $i++) { 
 				$textfile = sprintf("homeplus_가격_%s.txt", $element_list[$i]);
+
 				$fp = fopen($textfile,"r");
-				$doc_data = fgets($fp,1024);
 
-				if ( $doc_data == '' ) { 
-					unlink($textfile);
-					continue;
+				// 첫번 째 줄 읽어 개수 파악하기
+				$line_num = fgets($fp,1024);
+
+				for ($k=0; $k < intval($line_num); $k++) { 
+
+					$doc_data = fgets($fp,1024);
+
+					if ( $doc_data == '' ) { 
+						unlink($textfile);
+						continue;
+					}
+
+					$aaaa = explode(",", $doc_data);
+
+					if ( count($aaaa) != 5 ) { 
+						continue;
+					}
+
+					$home_info2[$i][$k] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
+					 
 				}
-
-				$aaaa = explode(",", $doc_data);
-
-				$home_info2[] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
-
-				$total_home2 = $total_home2 + intval($aaaa[4]);
 
 				fclose($fp);
 
@@ -172,23 +191,28 @@
 			for ($i=0; $i < count($element_list); $i++) { 
 				$textfile = sprintf("lottemart_인기_%s.txt", $element_list[$i]);
 				$fp = fopen($textfile,"r");
-				$doc_data = fgets($fp,1024);
 
-				if ( $doc_data == '' ) { 
-					unlink($textfile);
-					continue;
+				// 첫번 째 줄 읽어 개수 파악하기
+				$line_num = fgets($fp,1024);
+
+				for ($k=0; $k < intval($line_num); $k++) { 
+
+					$doc_data = fgets($fp,1024);
+
+					if ( $doc_data == '' ) { 
+						unlink($textfile);
+						continue;
+					}
+
+					$aaaa = explode(",", $doc_data);
+
+					if ( count($aaaa) != 5 ) { 
+						continue;
+					}
+
+					$lottemart_info[$i][$k] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
+					 
 				}
-
-				$aaaa = explode(",", $doc_data);
-
-				if ( count($aaaa) != 5 ){ 
-					unlink($textfile);
-					continue;
-				}
-
-				$lottemart_info[] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
-
-				$total_lottemart1 = $total_lottemart1 + intval($aaaa[4]);
 
 				fclose($fp);
 
@@ -203,23 +227,28 @@
 			for ($i=0; $i < count($element_list); $i++) { 
 				$textfile = sprintf("lottemart_가격_%s.txt", $element_list[$i]);
 				$fp = fopen($textfile,"r");
-				$doc_data = fgets($fp,1024);
 
-				if ( $doc_data == '' ) { 
-					unlink($textfile);
-					continue;
+				// 첫번 째 줄 읽어 개수 파악하기
+				$line_num = fgets($fp,1024);
+
+				for ($k=0; $k < intval($line_num); $k++) { 
+
+					$doc_data = fgets($fp,1024);
+
+					if ( $doc_data == '' ) { 
+						unlink($textfile);
+						continue;
+					}
+
+					$aaaa = explode(",", $doc_data);
+
+					if ( count($aaaa) != 5 ) { 
+						continue;
+					}
+
+					$lottemart_info2[$i][$k] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
+					 
 				}
-
-				$aaaa = explode(",", $doc_data);
-
-				if ( count($aaaa) != 5 ) { 
-					unlink($textfile);
-					continue;
-				}
-
-				$lottemart_info2[] = array($aaaa[0], $aaaa[1], $aaaa[2], $aaaa[3], $aaaa[4]);
-
-				$total_lottemart2 = $total_lottemart2 + intval($aaaa[4]);
 
 				fclose($fp);
 
@@ -259,23 +288,27 @@
 
 		</br></br>
 		<h3 align="left">쇼핑몰-롯데마트몰 인기품목 구매 정보<h3><br>
-		<h3>총합 <?php echo $total_lottemart1 ?> 원</h3><br>
+		<h3>총합 <?php echo $total_lottemart1[0] ?> 원</h3><br>
 		<div class="container-fluid">
 				<?php 
 
 				for ($i=0; $i < count($lottemart_info); $i++) { 
 
+					if ( $lottemart_info[$i][0][4] == '' ) {
+						continue;
+					}
+
 					printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
-						printf("<div class=\"col-xs-2 col-sm-2 no-padding\">\n");
-							printf("<a href=\"%s\">\n", $lottemart_info[$i][2]);
-								printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">\n", $lottemart_info[$i][1]);
+						printf("<div class=\"col-xs-3 col-sm-3 no-padding\">\n");
+							printf("<a href=\"%s\">\n", $lottemart_info[$i][0][2]);
+								printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">\n", $lottemart_info[$i][0][1]);
 							printf("</a>\n");
 						printf("</div>\n");
 
-						printf("<div class=\"col-xs-10 col-sm-10\">\n");
+						printf("<div class=\"col-xs-7 col-sm-7\">\n");
 
-							printf("<h4>%s</h4>", $lottemart_info[$i][3]);
-							printf("<h3>%s 원</h3>", $lottemart_info[$i][4]);
+							printf("<h4>%s</h4>", $lottemart_info[$i][0][3]);
+							printf("<h3>%s 원</h3>", $lottemart_info[$i][0][4]);
 						printf("</div>\n");
 					printf("</div>\n");
 				}
@@ -285,23 +318,27 @@
 
 		</br></br>
 		<h3 align="left">쇼핑몰-롯데마트몰 최저가 구매 정보<h3><br>
-		<h3>총합 <?php echo $total_lottemart2 ?> 원</h3><br>
+		<h3>총합 <?php echo $total_lottemart2[0] ?> 원</h3><br>
 		<div class="container-fluid">
 				<?php 
 
 				for ($i=0; $i < count($lottemart_info2); $i++) { 
 
+					if ( $lottemart_info2[$i][0][4] == '' ) {
+						continue;
+					}
+
 					printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
-						printf("<div class=\"col-xs-2 col-sm-2 no-padding\">\n");
-							printf("<a href=\"%s\">\n", $lottemart_info2[$i][2]);
-								printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">\n", $lottemart_info2[$i][1]);
+						printf("<div class=\"col-xs-3 col-sm-3 no-padding\">\n");
+							printf("<a href=\"%s\">\n", $lottemart_info2[$i][0][2]);
+								printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">\n", $lottemart_info2[$i][0][1]);
 							printf("</a>\n");
 						printf("</div>\n");
 
-						printf("<div class=\"col-xs-10 col-sm-10\">\n");
+						printf("<div class=\"col-xs-7 col-sm-7\">\n");
 
-							printf("<h4>%s</h4>", $lottemart_info2[$i][3]);
-							printf("<h3>%s 원</h3>", $lottemart_info2[$i][4]);
+							printf("<h4>%s</h4>", $lottemart_info2[$i][0][3]);
+							printf("<h3>%s 원</h3>", $lottemart_info2[$i][0][4]);
 						printf("</div>\n");
 					printf("</div>\n");
 				}
@@ -312,23 +349,27 @@
 
 		</br></br>
 		<h3 align="left">쇼핑몰-홈플러스 인기품목 구매 정보<h3><br>
-		<h3>총합 <?php echo $total_home1 ?> 원</h3><br>
+		<h3>총합 <?php echo $total_home1[0] ?> 원</h3><br>
 		<div class="container-fluid">
 				<?php 
 
 				for ($i=0; $i < count($home_info); $i++) { 
 
+					if ( $home_info[$i][0][4] == '' ) {
+						continue;
+					}
+
 					printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
-						printf("<div class=\"col-xs-2 col-sm-2 no-padding\">\n");
-							printf("<a href=\"%s\">\n", $home_info[$i][2]);
-								printf("<img src=\"http://%s\" class=\"img-responsive\" alt=\"\">\n", $home_info[$i][1]);
+						printf("<div class=\"col-xs-3 col-sm-3 no-padding\">\n");
+							printf("<a href=\"%s\">\n", $home_info[$i][0][2]);
+								printf("<img src=\"http://%s\" class=\"img-responsive\" alt=\"\">\n", $home_info[$i][0][1]);
 							printf("</a>\n");
 						printf("</div>\n");
 
-						printf("<div class=\"col-xs-10 col-sm-10\">\n");
+						printf("<div class=\"col-xs-7 col-sm-7\">\n");
 
-							printf("<h4>%s</h4>", $home_info[$i][3]);
-							printf("<h3>%s 원</h3>", $home_info[$i][4]);
+							printf("<h4>%s</h4>", $home_info[$i][0][3]);
+							printf("<h3>%s 원</h3>", $home_info[$i][0][4]);
 						printf("</div>\n");
 					printf("</div>\n");
 				}
@@ -338,23 +379,27 @@
 
 		</br></br>
 		<h3 align="left">쇼핑몰-홈플러스 최저가 구매 정보<h3><br>
-		<h3><?php echo $total_home2 ?> 원</h3><br>
+		<h3><?php echo $total_home2[0] ?> 원</h3><br>
 		<div class="container-fluid">
 				<?php 
 
 				for ($i=0; $i < count($home_info2); $i++) { 
 
+					if ( $home_info2[$i][0][4] == '' ) {
+						continue;
+					}
+
 					printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
-						printf("<div class=\"col-xs-2 col-sm-2 no-padding\">\n");
-							printf("<a href=\"%s\">\n", $home_info2[$i][2]);
-								printf("<img src=\"http://%s\" class=\"img-responsive\" alt=\"\">\n", $home_info2[$i][1]);
+						printf("<div class=\"col-xs-3 col-sm-3 no-padding\">\n");
+							printf("<a href=\"%s\">\n", $home_info2[$i][0][2]);
+								printf("<img src=\"http://%s\" class=\"img-responsive\" alt=\"\">\n", $home_info2[$i][0][1]);
 							printf("</a>\n");
 						printf("</div>\n");
 
-						printf("<div class=\"col-xs-10 col-sm-10\">\n");
+						printf("<div class=\"col-xs-7 col-sm-7\">\n");
 
-							printf("<h4>%s</h4>", $home_info2[$i][3]);
-							printf("<h3>%s 원</h3>", $home_info2[$i][4]);
+							printf("<h4>%s</h4>", $home_info2[$i][0][3]);
+							printf("<h3>%s 원</h3>", $home_info2[$i][0][4]);
 						printf("</div>\n");
 					printf("</div>\n");
 				}

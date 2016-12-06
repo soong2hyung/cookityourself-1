@@ -31,7 +31,7 @@ $connect = @mysql_connect($mysql_hostname.':'.$mysql_port, $mysql_username, $mys
 mysql_query(' SET NAMES '.$mysql_charset);
 
 //4. 쿼리 생성
-$query = "SELECT Password FROM User WHERE Id LIKE '".$_GET[Id]."'";
+$query = "SELECT Password, Name, Email FROM User WHERE Id LIKE '".$_GET[Id]."'";
 
 // echo $query;
 
@@ -45,7 +45,10 @@ if ( !empty($row) && ( $row[0] == $_GET[Password] ) ) {
 
 	// 로그인 성공
 	session_start();
-	$_SESSION['userID'] == $_GET[Id];
+	$_SESSION['user_id'] = $_GET[Id];
+
+	$_SESSION['user_name'] = $row[1];
+	$_SESSION['user_email'] = $row[2];
 	echo "1";
 } 
 else
