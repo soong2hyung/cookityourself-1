@@ -79,13 +79,13 @@
 					<div class="cols-sm-10">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-							<input type="text" class="form-control" name="Name" id="Name"  placeholder="닉네임을 입력해 주세요."/>
+							<input type="text" readonly class="form-control" name="Name" id="Name"  placeholder="닉네임을 입력해 주세요."/>
 						</div>
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="password" class="cols-sm-2 control-label">비밀번호</label>
+					<label for="password" class="cols-sm-2 control-label">검색기록</label>
 					<div class="cols-sm-10">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
@@ -95,7 +95,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="confirm" class="cols-sm-2 control-label">비밀번호 확인</label>
+					<label for="confirm" class="cols-sm-2 control-label">구매기록</label>
 					<div class="cols-sm-10">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
