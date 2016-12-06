@@ -271,9 +271,15 @@
 				<?php printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">", $img_url); ?>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<!-- HELLO -->
 		
 		
+=======
+
+		<!-- 주석1 -->
+
+>>>>>>> d91f48f6d9e670e2dcf9cb56a5db713f51b885f3
 		</br></br>
 		<h3 align="left">레시피 링크<h3>
 		<?php printf("<h5><a href=\"%s\" align=\"left\">%s</a></h5>", $url,$url); ?>
