@@ -38,7 +38,7 @@
 				<span class="hamb-bottom"></span>
 			</button>
 		</div>
-		<a class="glyphicon glyphicon-user" href="./login.html" style="color: #fff; font-size: 27px; float: right; margin-top: 25px">
+		<a class="glyphicon glyphicon-user" href="./login.php" style="color: #fff; font-size: 27px; float: right; margin-top: 25px">
 		</a>
 		<br/>
 		<br/> 
@@ -47,19 +47,19 @@
 		<div align="center">
 			<ul class="nav navbar-nav navbar">
 				<li>
-					<a class="page-scroll" href="./index.html">홈</a>
+					<a class="page-scroll" href="./index.php">홈</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="./recipe.html">레시피</a>
+					<a class="page-scroll" href="./recipe.php">레시피</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="./recommend.html">추천</a>
+					<a class="page-scroll" href="./recommend.php">추천</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="./popular.html">인기</a>
+					<a class="page-scroll" href="./popular.php">인기</a>
 				</li>
 				<li>
-					<a class="page-scroll" href="./subject.html">주제</a>
+					<a class="page-scroll" href="./subject.php">주제</a>
 				</li>
 			</ul>
 		</div>
@@ -73,12 +73,12 @@
 	<ul class="nav sidebar-nav">
 		<li class="sidebar-brand">
 			<!-- User info -->
-			<a href="./index.html">
+			<a href="./index.php">
 			   COOK IT YOURSELF
 			</a>
 			<h5>이은석님 안녕하세요!</h5>
 			<h5>leess@skku.edu</h5>
-			<a href="./userinfo.html" class="no-padding">
+			<a href="./userinfo.php" class="no-padding">
 				<button type="button" class="btn btn-warning btn-sm">My info</button>
 			</a>
 			<br/>
@@ -86,19 +86,19 @@
 		</li>
 		<br/>
 		<li>
-			<a class="page-scroll" href="./index.html">홈</a>
+			<a class="page-scroll" href="./index.php">홈</a>
 		</li>
 		<li>
-			<a class="page-scroll" href="./recipe.html">레시피</a>
+			<a class="page-scroll" href="./recipe.php">레시피</a>
 		</li>
 		<li>
-			<a class="page-scroll" href="./recommend.html">추천</a>
+			<a class="page-scroll" href="./recommend.php">추천</a>
 		</li>
 		<li>
-			<a class="page-scroll" href="./popular.html">인기</a>
+			<a class="page-scroll" href="./popular.php">인기</a>
 		</li>
 		<li>
-			<a class="page-scroll" href="./subject.html">주제별</a>
+			<a class="page-scroll" href="./subject.php">주제별</a>
 		</li>
 	</ul>
 </nav>

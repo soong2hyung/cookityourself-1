@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,8 +36,8 @@
 	<script src="../js/creative.min.js"></script>
 	<script> 
 		$(function(){
-			$("#header").load("header.html"); 
-			$("#footer").load("footer.html"); 
+			$("#header").load("header.php"); 
+			$("#footer").load("footer.php"); 
 		});
 	</script>
 </head>
@@ -56,21 +55,6 @@
 			<div class="carousel-inner">
 				<div class="item active"><a href="http://www.naver.com"><img src="img/portfolio/thumbnails/slide2.jpg" width="100%"></a></div>
 				<div class="item"><img src="img/portfolio/thumbnails/slide1.jpg" width="100%"></div>
-			</div>
-		</div>
-	</section>
-	<section class="no-padding" id="searchbar">
-		<div class="container">
-			<h2 class="section-heading" align="center"></h2>
-			<div class="col-sm-6 col-sm-offset-3">
-					<div class="input-group stylish-input-group">
-						<input type="text" class="form-control"  placeholder="레시피 검색" >
-						<span class="input-group-addon">
-							<button type="submit">
-								<span class="glyphicon glyphicon-search"></span>
-							</button>  
-						</span>
-					</div>
 			</div>
 		</div>
 	</section>
@@ -118,7 +102,7 @@
 				</div>
 			</div>
 			<div class="row no-gutter popup-gallery">
-				<div class="col-xs-12 col-sm-12">
+				<div class="col-xs-6 col-sm-6">
 					<a href="http://www.naver.com" class="portfolio-box">
 						<img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
 						<div class="portfolio-box-caption">
@@ -133,7 +117,71 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-xs-12 col-sm-12">
+				<div class="col-xs-6 col-sm-6">
+					<a href="http://www.naver.com" class="portfolio-box">
+						<img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">
+									볶음밥
+								</div>
+								<div class="project-name">
+									자주 해먹지마라 질린다.
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row no-gutter popup-gallery">
+				<div class="col-xs-6 col-sm-6">
+					<a href="http://www.naver.com" class="portfolio-box">
+						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">
+									냉면
+								</div>
+								<div class="project-name">
+									연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩~
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-6 col-sm-6">
+					<a href="http://www.naver.com" class="portfolio-box">
+						<img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">
+									딸기쇼트케잌
+								</div>
+								<div class="project-name">
+									이것은 딸기가 포인트다.
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row no-gutter popup-gallery">
+				<div class="col-xs-6 col-sm-6">
+					<a href="http://www.naver.com" class="portfolio-box">
+						<img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">
+									센드위치
+								</div>
+								<div class="project-name">
+									빠리바게트에 판다.
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-6 col-sm-6">
 					<a href="http://www.naver.com" class="portfolio-box">
 						<img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
 						<div class="portfolio-box-caption">
