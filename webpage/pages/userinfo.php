@@ -63,7 +63,7 @@
 					<label for="name" class="cols-sm-2 control-label">ID</label>
 					<div class="cols-sm-10">
 						<div class="input-group">
-							<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+							<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
 							<?php  
 							printf("<input type=\"text\" readonly class=\"form-control\" name=\"Id\" id=\"Id\" value=\"%s\">", $_SESSION['user_id']);
 							?>

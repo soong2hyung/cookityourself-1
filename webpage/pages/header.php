@@ -29,7 +29,7 @@
 	});
 </script>
 <nav id="mainNav" class="navbar navbar-default">
-	<div class="container-fluid">
+	<div>
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="hamburger is-closed" data-toggle="offcanvas">
@@ -38,7 +38,7 @@
 				<span class="hamb-bottom"></span>
 			</button>
 		</div>
-		<a class="glyphicon glyphicon-user" href="./login.php" style="color: #fff; font-size: 27px; float: right; margin-top: 25px">
+		<a class="glyphicon glyphicon-user" href="./login.php" style="color: #fff; font-size: 27px; float: right; margin-right: 10px; margin-top: 20px">
 		</a>
 		<br/>
 		<br/> 
@@ -50,7 +50,7 @@
 					<a class="page-scroll" href="./index.php">홈</a>
 				</li>
 				<li width="20%">
-					<a class="page-scroll" href="./recipe.php">레시피</a>
+					<a class="page-scroll" href="./recipe.php">검색</a>
 				</li >
 				<li width="20%">
 					<a class="page-scroll" href="./recommend.php">추천</a>
