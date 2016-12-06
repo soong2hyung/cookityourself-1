@@ -91,6 +91,7 @@
 			<?php 
 
 			$keyword = $_GET["search"]; 
+			$tt = 0;
 
 			if ( $keyword == '' ) die();
 
@@ -104,12 +105,12 @@
 			//1. DB 연결
 			$connect = @mysql_connect($mysql_hostname.':'.$mysql_port, $mysql_username, $mysql_password); 
 
-			if(!$connect){
-				echo '[연결실패] : '.mysql_error().'<br>'; 
-				die('MySQL 서버에 연결할 수 없습니다.');
-			} else {
-				echo '[연결성공]<br>';
-			}
+			// if(!$connect){
+			// 	echo '[연결실패] : '.mysql_error().'<br>'; 
+			// 	die('MySQL 서버에 연결할 수 없습니다.');
+			// } else {
+			// 	echo '[연결성공]<br>';
+			// }
 
 			// 2. DB 선택
 			@mysql_select_db($mysql_database, $connect) or die('DB 선택 실패');
@@ -118,11 +119,14 @@
 			mysql_query(' SET NAMES '.$mysql_charset);
 
 			//4. 쿼리 생성
+			printf("<div class=\"col-lg-12 text-center\">\n");
+				printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
+					printf("<h2 padding-top=\"20px\" class=\"section-heading\"><br><br> 레시피 이름 검색 결과 </h2> <br><br>\n");
+				printf("</div>\n");
+			printf("</div>\n");
+
 			$query = "SELECT * FROM Recipe WHERE Name LIKE '%".$keyword."%'";
 			$count = "SELECT count(*) FROM Recipe WHERE Name LIKE '%".$keyword."%'";
-
-			// echo $query;
-			//echo $count;
 
 			//5. 쿼리 실행
 			//5.1 검색 결과의 수 구하기
@@ -130,12 +134,70 @@
 			$row = mysql_fetch_row($result);
 			$total_no = $row[0];
 
-			if ( $total_no > 100 ) die();
 
 			//5.2 실제 검색
 			$result = mysql_query($query);
 
 			while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+
+				$tt = $tt + 1;
+
+				$id       = $row[0];
+				$name     = $row[1];
+				$url      = $row[2];
+				$img_url  = $row[3];
+				$elements =	str_replace(";", ", ", $row[4]);
+				$category =	str_replace(";", ", ", $row[5]);
+
+				printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
+					printf("<div class=\"col-xs-4 col-sm-4 no-padding\">\n");
+						printf("<a href=\"%s\">\n", $url);
+							printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">\n", $img_url);
+						printf("</a>\n");
+					printf("</div>\n");
+					printf("<div class=\"col-xs-8 col-sm-8\">\n");
+						
+						printf("<h3><a href=\"%s\">%s</a></h3>\n","recipeview.php?Id=".$id, $name);
+
+						printf("<h5>%s</h5>", $category);
+						printf("<h5>%s</h5>", $elements);
+					printf("</div>\n");
+				printf("</div><br>\n");
+
+				if ( $tt > 15 ) { 
+					$tt = 0;
+					break;
+				}
+			}
+
+			// 이번엔 테마검색
+			//4. 쿼리 생성
+			printf("<div class=\"col-lg-12 text-center\">\n");
+				printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
+					printf("<h2 padding-top=\"20px\" class=\"section-heading\"> <br><br> 카테고리 검색 결과 </h2> <br><br>\n");
+				printf("</div>\n");
+			printf("</div>\n");
+
+
+
+			$query = "SELECT * FROM Recipe WHERE Category LIKE '%".$keyword."%'";
+			$count = "SELECT count(*) FROM Recipe WHERE Category LIKE '%".$keyword."%'";
+
+			//5. 쿼리 실행
+			//5.1 검색 결과의 수 구하기
+			$result = mysql_query($count) or die(mysql_error());
+			$row = mysql_fetch_row($result);
+			$total_no = $row[0];
+
+
+
+			//5.2 실제 검색
+			$result = mysql_query($query);
+
+			while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+
+
+				$tt = $tt + 1;
 
 				$id       = $row[0];
 				$name     = $row[1];
@@ -151,15 +213,73 @@
 						printf("</a>\n");
 					printf("</div>\n");
 					printf("<div class=\"col-xs-8 col-sm-8\">\n");
-						printf("<h3>%s</h3>\n", $name);
+						printf("<h3><a href=\"%s\">%s</a></h3>\n","recipeview.php?Id=".$id, $name);
 						printf("<h5>%s</h5>", $category);
+						printf("<h5>%s</h5>", $elements);
 					printf("</div>\n");
-				printf("</div>\n");
+				printf("</div><br>\n");
 
+				if ( $tt > 15 ) { 
+					$tt = 0;
+					break;
+				}
+			}
+
+
+
+			// 이번엔 테마검색
+			//4. 쿼리 생성
+			printf("<div class=\"col-lg-12 text-center\">\n");
+				printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
+					printf("<h2 padding-top=\"20px\" class=\"section-heading\"> <br><br> 요리 재료 검색 결과 </h2><br><br>\n");
+				printf("</div>\n");
+			printf("</div>\n");
+
+			$query = "SELECT * FROM Recipe WHERE Element LIKE '%".$keyword."%'";
+			$count = "SELECT count(*) FROM Recipe WHERE Element LIKE '%".$keyword."%'";
+
+			//5. 쿼리 실행
+			//5.1 검색 결과의 수 구하기
+			$result = mysql_query($count) or die(mysql_error());
+			$row = mysql_fetch_row($result);
+			$total_no = $row[0];
+
+
+
+			//5.2 실제 검색
+			$result = mysql_query($query);
+
+			while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+
+				$tt = $tt + 1;
+
+				$id       = $row[0];
+				$name     = $row[1];
+				$url      = $row[2];
+				$img_url  = $row[3];
+				$elements =	$row[4];
+				$category =	$row[5];
+
+				printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
+					printf("<div class=\"col-xs-4 col-sm-4 no-padding\">\n");
+						printf("<a href=\"%s\">\n", $url);
+							printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">\n", $img_url);
+						printf("</a>\n");
+					printf("</div>\n");
+					printf("<div class=\"col-xs-8 col-sm-8\">\n");
+						printf("<h3><a href=\"%s\">%s</a></h3>\n","recipeview.php?Id=".$id, $name);
+						printf("<h5>%s</h5>", $category);
+						printf("<h5>%s</h5>", $elements);
+					printf("</div>\n");
+				printf("</div><br>\n");
+
+				if ( $tt > 15 ) { 
+					$tt = 0;
+					break;
+				}
 			}
 
 			?> 
-
 
 		</div>
 	</section>

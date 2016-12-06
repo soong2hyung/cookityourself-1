@@ -4,7 +4,6 @@ import sys
 from urllib import quote
 import urllib2
 from bs4 import BeautifulSoup
-import operator
 
 
 def crawling_homeplus_main(keyword):
@@ -44,32 +43,24 @@ def main(argv):
         return -1
     else:
         keyword = argv[1]
-        #print u"입력받은 키워드 "
-        #print keyword
-    filename1 = "homeplus_인기_" + keyword + ".txt"
-    filename2 = "homeplus_가격_" + keyword + ".txt"
+        print u"입력받은 키워드 "
+        print keyword
+    filename = "homeplus_" + keyword + ".txt"
 
     item_list = crawling_homeplus_main(keyword)
 
-    f = open(filename1, 'w')
-    data = ""
-    for ob in item_list[0]:
-        data += str(unicode(ob).encode("utf-8")) + ","
-    data = data[:-1]
-    f.write(data)
-    f.close()
-
-    item_list = item_list[:15]
-    new_list = sorted(item_list, key=operator.itemgetter(4))
-    f = open(filename2, 'w')
-    for a in range(0, 3):
+    f = open(filename, 'w')
+    for item in item_list:
         data = ""
-        for ob in new_list[a]:
+        for ob in item:
             data += str(unicode(ob).encode("utf-8")) + ","
         data = data[:-1]
         f.write(data)
         f.write("\n")
+
     f.close()
+
+    #print "finish"
 
     return 0
 
