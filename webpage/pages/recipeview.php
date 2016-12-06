@@ -265,9 +265,9 @@
 		<br>
 
 		<div class="col-xs-12 col-sm-12">
-			<div class="col-xs-4 col-sm-4">
+			<div class="col-xs-2 col-sm-2">
 			</div>
-			<div class="col-xs-4 col-sm-4">
+			<div class="col-xs-8 col-sm-8">
 				<?php printf("<img src=\"%s\" class=\"img-responsive\" alt=\"\">", $img_url); ?>
 			</div>
 		</div>

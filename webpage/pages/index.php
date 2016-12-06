@@ -60,7 +60,7 @@
 		</div>
 	</section>
 
-	<!-- search -->
+	<!-- search 
 	<form action="search.php" method="get">
 	
 	<section class="no-padding" id="searchbar">
@@ -80,7 +80,7 @@
 	</section>
 
 	</form>
-
+	-->
 	<section class="no-padding" id="recommend">
 		<div class="container">
 			<div class="row">
@@ -92,31 +92,31 @@
 	
 		<div class="container-fluid">
 			<div class="row no-gutter popup-gallery">
-				<div class="col-xs-6 col-sm-6">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="../img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+				<div class="col-xs-4 col-sm-4">
+					<a href="http://cookityourself.ivyro.net/pages/recipeview.php?Id=380" class="portfolio-box">
+						<img src="http://krcdn.ar-cdn.com/recipes/xlarge/14c8f2f0-858d-4d03-8d92-adbfbbfb9cf0.jpg" class="img-responsive" width="100%" alt="">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
-									냉면
+									스콘
 								</div>
 								<div class="project-name">
-									연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩~
+									커피와 함께하는 스콘 만들기
 								</div>
 							</div>
 						</div>
 					</a>
 				</div>
-				<div class="col-xs-6 col-sm-6">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="../img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+				<div class="col-xs-4 col-sm-4">
+					<a href="recipeview.php?Id=110" class="portfolio-box">
+						<img src="http://krcdn.ar-cdn.com/recipes/xlarge/6d391d17-651f-49a6-a76c-4d80fe3d5f08.jpg" class="img-responsive" alt="">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
-									딸기쇼트케잌
+									셀커크 배넉
 								</div>
 								<div class="project-name">
-									이것은 딸기가 포인트다.
+									스코틀랜드 향이 물씬~ 스코틀랜드 과자빵
 								</div>
 							</div>
 						</div>
@@ -124,21 +124,7 @@
 				</div>
 			</div>
 			<div class="row no-gutter popup-gallery">
-				<div class="col-xs-12 col-sm-12">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="../img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">
-									센드위치
-								</div>
-								<div class="project-name">
-									빠리바게트에 판다.
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
+				
 				
 				<div class="col-xs-12 col-sm-12">
 					<a href="http://www.naver.com" class="portfolio-box">
