@@ -818,7 +818,7 @@ input::-webkit-input-placeholder {
 	background-color: #468966;
 }
 .redt{
-	color: #AE4820;
+	color: #DE783E;
 }
 .brownt{
 	color: #D66946;
@@ -846,4 +846,22 @@ input::-webkit-input-placeholder {
 }
 .h5{
 	font-weight: 400;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #EFA02B; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.blackt{
+	color: #333;
 }

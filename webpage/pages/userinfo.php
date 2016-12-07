@@ -80,7 +80,7 @@
 						<div class="input-group">
 							<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
 							<?php  
-							printf("<input type=\"text\" class=\"form-control\" name=\"Email\" id=\"Email\"  value=\"%s\"/>", $_SESSION['user_email']);
+							printf("<input type=\"text\" readonly class=\"form-control\" name=\"Email\" id=\"Email\"  value=\"%s\"/>", $_SESSION['user_email']);
 							?>
 						</div>
 					</div>
@@ -119,9 +119,8 @@
 				</div>
 
 				<style type="text/css">
-					h4 { color: #000; }
-					ul { color: #000; }
-					li { color: #000; }
+					ul { color: #333; }
+					li { color: #333; }
 				</style>
 
 				<?php 
@@ -149,7 +148,7 @@
 				$keyword_list = $keyword_row[0];
 				$lk = explode(";",  $keyword_list);
 
-				printf("<br><h4>검색 기록</h4><ul>");
+				printf("<br><h4 class=\"blackt\">검색 기록</h4><ul>");
 
 				for ($i=0; $i < count($lk); $i++) { 
 					

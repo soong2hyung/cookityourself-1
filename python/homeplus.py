@@ -51,20 +51,27 @@ def main(argv):
 
     item_list = crawling_homeplus_main(keyword)
 
-    f = open(filename1, 'w')
-    data = ""
-    for ob in item_list[0]:
-        data += str(unicode(ob).encode("utf-8")) + ","
-    data = data[:-1]
-    f.write(data)
-    f.close()
-
     item_list = item_list[:15]
     new_list = sorted(item_list, key=operator.itemgetter(4))
-    f = open(filename2, 'w')
-    for a in range(0, 3):
+    f = open(filename1, 'w')
+    count = len(item_list)
+    f.write(str(count))
+    f.write("\n")
+    for item in item_list:
         data = ""
-        for ob in new_list[a]:
+        for ob in item:
+            data += str(unicode(ob).encode("utf-8")) + ","
+        data = data[:-1]
+        f.write(data)
+        f.write("\n")
+    f.close()
+
+    f = open(filename2, 'w')
+    f.write(str(count))
+    f.write("\n")
+    for item in new_list:
+        data = ""
+        for ob in item:
             data += str(unicode(ob).encode("utf-8")) + ","
         data = data[:-1]
         f.write(data)

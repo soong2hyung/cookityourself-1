@@ -335,7 +335,7 @@
 
 						printf("<div class=\"col-xs-2 col-sm-2\">\n");
 
-							printf("<input type=\"checkbox\" name=\"\" value=\"\">");
+//							printf("<input type=\"checkbox\" name=\"\" value=\"\">");
 							
 						printf("</div>\n");
 

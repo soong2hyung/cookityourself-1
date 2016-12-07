@@ -218,7 +218,7 @@
 						printf('</br><h3>검색 기반 추천</h3></br>');
 				printf('</div>');
 
-				printf('<div class="row no-gutter popup-gallery">');
+				printf('<div class="row no-gutter popup-gallery red">');
 
 				$tt = 0;
 				while ( $tt < 3 ) {
@@ -290,13 +290,13 @@
 				printf('<div class="col-xs-12 col-sm-12 green">');
 					printf('</br><h3>구매 기반 추천</h3></br>');
 				printf('</div>');
-				printf('<div class="row no-gutter popup-gallery">');
+				printf('<div class="row no-gutter popup-gallery green">');
 					printf('<div class="col-xs-4 col-sm-4">');
 						printf('<a href="recipeview.php?Id=285" class="portfolio-box">');
 							printf('<img src="http://krcdn.ar-cdn.com/recipes/xlarge/f19a3ba6-2f9d-403b-8fae-dd3933ea00bc.jpg" class="img-responsive" alt="">');
 							printf('<div class="portfolio-box-caption">');
 								printf('<div class="portfolio-box-caption-content">');
-									printf('<div class="project-category text-faded redt">');
+									printf('<div class="project-category text-faded greent">');
 										printf('또띠아 피자');
 									printf('</div>');
 									printf('<div class="project-name">');
@@ -311,7 +311,7 @@
 							printf('<img src="http://krcdn.ar-cdn.com/recipes/xlarge/b5a48f41-efbe-4201-a39f-d8dc7049e22c.jpg" class="img-responsive" alt="">');
 							printf('<div class="portfolio-box-caption">');
 								printf('<div class="portfolio-box-caption-content">');
-									printf('<div class="project-category text-faded redt">');
+									printf('<div class="project-category text-faded greent">');
 										printf('아보카도 샌드위치');
 									printf('</div>');
 									printf('<div class="project-name">');
@@ -326,7 +326,7 @@
 							printf('<img src="https://www.menupan.com/cook/cookimg/028000.jpg" class="img-responsive" alt="">');
 							printf('<div class="portfolio-box-caption">');
 								printf('<div class="portfolio-box-caption-content">');
-									printf('<div class="project-category text-faded redt">');
+									printf('<div class="project-category text-faded greent">');
 										printf('밥 샌드위치');
 									printf('</div>');
 									printf('<div class="project-name">');
