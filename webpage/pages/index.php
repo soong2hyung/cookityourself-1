@@ -51,11 +51,13 @@
 			<ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1" class></li>
+				<li data-target="#myCarousel" data-slide-to="2" class></li>
 			</ol>
 			<!-- 회전광고판 항목 -->
 			<div class="carousel-inner">
-				<div class="item active"><a href="http://www.naver.com"><img src="../img/portfolio/thumbnails/slide2.jpg" width="100%"></a></div>
-				<div class="item"><img src="../img/portfolio/thumbnails/slide1.jpg" width="100%"></div>
+				<div class="item active"><a href="search.php?search=홍합"><img src="../img/s1.png" width="100%"></a></div>
+				<div class="item"><a href="search.php?search=레몬"><img src="../img/s2.png" width="100%"></div>
+				<div class="item"><a href="search.php?search=떡볶이"><img src="../img/s3.png" width="100%"></div>
 			</div>
 		</div>
 	</section>
@@ -89,11 +91,16 @@
 				</div>
 			</div>
 		</div>
-	
-		<div class="container-fluid">
+		<div class="container-fluid orange">
 			<div class="row no-gutter popup-gallery">
 				<div class="col-xs-4 col-sm-4">
-					<a href="http://cookityourself.ivyro.net/pages/recipeview.php?Id=380" class="portfolio-box">
+					<h4>Today</h4>
+					<h4>Recipe</h4>
+					<h4>오늘의</h4>
+					<h4>레시피</h4>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="recipeview.php?Id=380" class="portfolio-box">
 						<img src="http://krcdn.ar-cdn.com/recipes/xlarge/14c8f2f0-858d-4d03-8d92-adbfbbfb9cf0.jpg" class="img-responsive" width="100%" alt="">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
@@ -123,24 +130,106 @@
 					</a>
 				</div>
 			</div>
+			<div class="container-fluid">
 			<div class="row no-gutter popup-gallery">
-				
-				
-				<div class="col-xs-12 col-sm-12">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="../img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+				<div class="col-xs-4 col-sm-4">
+					<a href="recipeview.php?Id=285" class="portfolio-box">
+						<img src="http://krcdn.ar-cdn.com/recipes/xlarge/f19a3ba6-2f9d-403b-8fae-dd3933ea00bc.jpg" class="img-responsive" alt="">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
-									볶음밥
+									또띠아 피자
 								</div>
 								<div class="project-name">
-									자주 해먹지마라 질린다.
+									집에서 만들어 먹는 간단 또띠아 피자
 								</div>
 							</div>
 						</div>
 					</a>
 				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="recipeview.php?Id=433" class="portfolio-box">
+						<img src="http://krcdn.ar-cdn.com/recipes/xlarge/b5a48f41-efbe-4201-a39f-d8dc7049e22c.jpg" class="img-responsive" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">
+									아보카도 샌드위치
+								</div>
+								<div class="project-name">
+									아보카도의 부드러움에 마요네즈의 고소함
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-4 col-sm-4">
+					<a href="recipeview.php?Id=1272" class="portfolio-box">
+						<img src="https://www.menupan.com/cook/cookimg/028000.jpg" class="img-responsive" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">
+									밥 샌드위치
+								</div>
+								<div class="project-name">
+									밥으로 만드는 초간단 샌드위치
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 green">
+				</br>
+				<h3>주제 추천</h3>
+				</br>
+			</div>
+			<div class="col-xs-4 col-sm-4 red">
+				<a href="search.php?search=김치">
+				<h4>김치</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 brown">
+				<a href="search.php?search=김치">
+				<h4>고등어</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 red">
+				<a href="search.php?search=김치">
+				<h4>돈까스</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 brown">
+				<a href="search.php?search=김치">
+				<h4>참치</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 red">
+				<a href="search.php?search=김치">
+				<h4>스팸</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 brown">
+				<a href="search.php?search=김치">
+				<h4>닭</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 red">
+				<a href="search.php?search=김치">
+				<h4>소고기</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 brown">
+				<a href="search.php?search=김치">
+				<h4>돼지고기</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 red">
+				<a href="search.php?search=김치">
+				<h4>떡볶이</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 brown">
+				<a href="search.php?search=김치">
+				<h4>식빵</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 red">
+				<a href="search.php?search=김치">
+				<h4>밥</h4>
+			</div>
+			<div class="col-xs-4 col-sm-4 brown">
+				<a href="search.php?search=김치">
+				<h4>된장</h4>
 			</div>
 		</div>
 	</section>
