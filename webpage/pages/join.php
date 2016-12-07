@@ -129,7 +129,7 @@
 	                        if (str == "1") {
 	                        	alert("회원가입에 성공했습니다.");
 								//sleep(5);
-								location.replace("http://cookityourself.ivyro.net");
+								location.replace("http://cookityourself.ivyro.net/pages/login.php");
 	                        }
 	                        else {
 								

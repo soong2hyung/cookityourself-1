@@ -48,13 +48,16 @@
 	<div class="row main">
 		<div class="panel-heading">
 		   <div class="panel-title text-center">
-				<h1 class="title">내 정보 수정</h1>
+				<h1 class="title">내 정보 확인 및 수정</h1>
 				<hr />
 			</div>
 		</div> 
 
 		<?php
 		session_start();
+		if ( !isset($_SESSION['user_id']) ) {
+			printf("<script type=\"text/javascript\"> location.replace(\"http://cookityourself.ivyro.net\"); </script>");
+		}
 		?>
 
 		<div class="main-login main-center">
@@ -114,6 +117,47 @@
 						</div>
 					</div>
 				</div>
+
+				<style type="text/css">
+					h4 { color: #000; }
+					ul { color: #000; }
+					li { color: #000; }
+				</style>
+
+				<?php 
+
+				$mysql_hostname = 'localhost';
+				$mysql_username = 'cookityourself';
+				$mysql_password = 'cook1357';
+				$mysql_database = 'cookityourself';
+				$mysql_port = '3306';
+				$mysql_charset = 'utf8';
+
+				//1. DB 연결
+				$connect = @mysql_connect($mysql_hostname.':'.$mysql_port, $mysql_username, $mysql_password); 
+
+				// 2. DB 선택
+				@mysql_select_db($mysql_database, $connect) or die('DB 선택 실패');
+
+				//3. 문자셋 지정
+				mysql_query(' SET NAMES '.$mysql_charset);
+
+				//4. 쿼리 생성
+				$keyword_query = "SELECT SearchRecode FROM User WHERE Id LIKE '%".$_SESSION['user_id']."%'";
+				$keyword_result = mysql_query($keyword_query) or die(mysql_error());
+				$keyword_row = mysql_fetch_row($keyword_result);
+				$keyword_list = $keyword_row[0];
+				$lk = explode(";",  $keyword_list);
+
+				printf("<br><h4>검색 기록</h4><ul>");
+
+				for ($i=0; $i < count($lk); $i++) { 
+					
+					printf('<li>%s</li>', $lk[$i]);
+				}
+				printf("</ul>");
+				
+				?>
 
 				<div class="form-group ">
 					<button type="button" class="btn btn-primary btn-lg btn-block login-button" onclick="EditUser()">수정하기</button>

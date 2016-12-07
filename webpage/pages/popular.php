@@ -45,19 +45,40 @@
 <div id="wrapper">
 	<div class="overlay"></div>
 	<div id="header"></div>
-	<section class="no-padding" id="slider" style="padding-top: 80px;">>
+
+	<!-- nav menu -->
+	<section class="no-padding" id="slider">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1" class></li>
+				<li data-target="#myCarousel" data-slide-to="2" class></li>
+			</ol>
+			<!-- 회전광고판 항목 -->
+			<div class="carousel-inner">
+				<div class="item active"><a href="search.php?search=홍합"><img src="../img/s1.png" width="100%"></a></div>
+				<div class="item"><a href="search.php?search=레몬"><img src="../img/s2.png" width="100%"></a></div>
+				<div class="item"><a href="search.php?search=떡볶이"><img src="../img/s3.png" width="100%"></a></div>
+			</div>
+		</div>
+	</section>
+
+<!-- 	<section class="no-padding" id="slider" style="padding-top: 80px;">>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
 			<ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1" class></li>
 			</ol>
-			<!-- 회전광고판 항목 -->
+			
 			<div class="carousel-inner">
-				<div class="item active"><a href="http://www.naver.com"><img src="img/portfolio/thumbnails/slide2.jpg" width="100%"></a></div>
-				<div class="item"><img src="img/portfolio/thumbnails/slide1.jpg" width="100%"></div>
+				<div class="item active"><a href="search.php?search=홍합"><img src="../img/s1.png" width="100%"></a></div>
+				<div class="item"><a href="search.php?search=레몬"><img src="../img/s2.png" width="100%"></div>
+				<div class="item"><a href="search.php?search=떡볶이"><img src="../img/s3.png" width="100%"></div>
 			</div>
 		</div>
 	</section>
+ -->
+
 
 	<section class="no-padding" id="recommend">
 		<div class="container">
@@ -69,134 +90,123 @@
 		</div>
 	
 		<div class="container-fluid">
-			<div class="row no-gutter popup-gallery">
-				<div class="col-xs-6 col-sm-6">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">
-									냉면
-								</div>
-								<div class="project-name">
-									연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩~
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-xs-6 col-sm-6">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">
-									딸기쇼트케잌
-								</div>
-								<div class="project-name">
-									이것은 딸기가 포인트다.
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="row no-gutter popup-gallery">
-				<div class="col-xs-6 col-sm-6">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">
-									센드위치
-								</div>
-								<div class="project-name">
-									빠리바게트에 판다.
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-xs-6 col-sm-6">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">
-									볶음밥
-								</div>
-								<div class="project-name">
-									자주 해먹지마라 질린다.
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="row no-gutter popup-gallery">
-				<div class="col-xs-6 col-sm-6">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">
-									냉면
-								</div>
-								<div class="project-name">
-									연신 덥다 덥다를 외치면서도 밥 시간만 되면 더운 생각은 까무룩~
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-xs-6 col-sm-6">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">
-									딸기쇼트케잌
-								</div>
-								<div class="project-name">
-									이것은 딸기가 포인트다.
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="row no-gutter popup-gallery">
-				<div class="col-xs-6 col-sm-6">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">
-									센드위치
-								</div>
-								<div class="project-name">
-									빠리바게트에 판다.
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-xs-6 col-sm-6">
-					<a href="http://www.naver.com" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">
-									볶음밥
-								</div>
-								<div class="project-name">
-									자주 해먹지마라 질린다.
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
+
+			
+			<?php 
+			// <!-- 검색 기반 추천 -->
+
+			session_start();
+			if ( !isset($_SESSION['user_id']) ) {
+				printf("<h3>로그인하면 추천해주지롱(임시메시지)</h3>");
+			}
+			else {
+				printf('<div class="col-xs-12 col-sm-12 red">');
+						printf('</br><h3>검색 기반 추천</h3></br>');
+				printf('</div>');
+				printf('<div class="row no-gutter popup-gallery">');
+					printf('<div class="col-xs-4 col-sm-4">');
+						printf('<a href="recipeview.php?Id=285" class="portfolio-box">');
+							printf('<img src="http://krcdn.ar-cdn.com/recipes/xlarge/f19a3ba6-2f9d-403b-8fae-dd3933ea00bc.jpg" class="img-responsive" alt="">');
+							printf('<div class="portfolio-box-caption">');
+								printf('<div class="portfolio-box-caption-content">');
+									printf('<div class="project-category text-faded redt">');
+										printf('또띠아 피자');
+									printf('</div>');
+									printf('<div class="project-name">');
+										printf('집에서 만들어 먹는 간단 또띠아 피자');
+									printf('</div>');
+								printf('</div>');
+							printf('</div>');
+						printf('</a>');
+					printf('</div>');
+					printf('<div class="col-xs-4 col-sm-4">');
+						printf('<a href="recipeview.php?Id=433" class="portfolio-box">');
+							printf('<img src="http://krcdn.ar-cdn.com/recipes/xlarge/b5a48f41-efbe-4201-a39f-d8dc7049e22c.jpg" class="img-responsive" alt="">');
+							printf('<div class="portfolio-box-caption">');
+								printf('<div class="portfolio-box-caption-content">');
+									printf('<div class="project-category text-faded redt">');
+										printf('아보카도 샌드위치');
+									printf('</div>');
+									printf('<div class="project-name">');
+										printf('아보카도의 부드러움에 마요네즈의 고소함');
+									printf('</div>');
+								printf('</div>');
+							printf('</div>');
+						printf('</a>');
+					printf('</div>');
+					printf('<div class="col-xs-4 col-sm-4">');
+						printf('<a href="recipeview.php?Id=1272" class="portfolio-box">');
+							printf('<img src="https://www.menupan.com/cook/cookimg/028000.jpg" class="img-responsive" alt="">');
+							printf('<div class="portfolio-box-caption">');
+								printf('<div class="portfolio-box-caption-content">');
+									printf('<div class="project-category text-faded redt">');
+										printf('밥 샌드위치');
+									printf('</div>');
+									printf('<div class="project-name">');
+										printf('밥으로 만드는 초간단 샌드위치');
+									printf('</div>');
+								printf('</div>');
+							printf('</div>');
+						printf('</a>');
+					printf('</div>');
+				printf('</div>');
+
+				// <!-- 구매 기반 추천-->
+				printf('<div class="col-xs-12 col-sm-12 green">');
+					printf('</br><h3>구매 기반 추천</h3></br>');
+				printf('</div>');
+				printf('<div class="row no-gutter popup-gallery">');
+					printf('<div class="col-xs-4 col-sm-4">');
+						printf('<a href="recipeview.php?Id=285" class="portfolio-box">');
+							printf('<img src="http://krcdn.ar-cdn.com/recipes/xlarge/f19a3ba6-2f9d-403b-8fae-dd3933ea00bc.jpg" class="img-responsive" alt="">');
+							printf('<div class="portfolio-box-caption">');
+								printf('<div class="portfolio-box-caption-content">');
+									printf('<div class="project-category text-faded redt">');
+										printf('또띠아 피자');
+									printf('</div>');
+									printf('<div class="project-name">');
+										printf('집에서 만들어 먹는 간단 또띠아 피자');
+									printf('</div>');
+								printf('</div>');
+							printf('</div>');
+						printf('</a>');
+					printf('</div>');
+					printf('<div class="col-xs-4 col-sm-4">');
+						printf('<a href="recipeview.php?Id=433" class="portfolio-box">');
+							printf('<img src="http://krcdn.ar-cdn.com/recipes/xlarge/b5a48f41-efbe-4201-a39f-d8dc7049e22c.jpg" class="img-responsive" alt="">');
+							printf('<div class="portfolio-box-caption">');
+								printf('<div class="portfolio-box-caption-content">');
+									printf('<div class="project-category text-faded redt">');
+										printf('아보카도 샌드위치');
+									printf('</div>');
+									printf('<div class="project-name">');
+										printf('아보카도의 부드러움에 마요네즈의 고소함');
+									printf('</div>');
+								printf('</div>');
+							printf('</div>');
+						printf('</a>');
+					printf('</div>');
+					printf('<div class="col-xs-4 col-sm-4">');
+						printf('<a href="recipeview.php?Id=1272" class="portfolio-box">');
+							printf('<img src="https://www.menupan.com/cook/cookimg/028000.jpg" class="img-responsive" alt="">');
+							printf('<div class="portfolio-box-caption">');
+								printf('<div class="portfolio-box-caption-content">');
+									printf('<div class="project-category text-faded redt">');
+										printf('밥 샌드위치');
+									printf('</div>');
+									printf('<div class="project-name">');
+										printf('밥으로 만드는 초간단 샌드위치');
+									printf('</div>');
+								printf('</div>');
+							printf('</div>');
+						printf('</a>');
+					printf('</div>');
+				printf('</div>');
+			}
+
+			 ?>
+			
+			
 		</div>
 
 	</section>

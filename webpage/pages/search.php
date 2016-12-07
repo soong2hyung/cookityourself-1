@@ -105,13 +105,6 @@
 			//1. DB 연결
 			$connect = @mysql_connect($mysql_hostname.':'.$mysql_port, $mysql_username, $mysql_password); 
 
-			// if(!$connect){
-			// 	echo '[연결실패] : '.mysql_error().'<br>'; 
-			// 	die('MySQL 서버에 연결할 수 없습니다.');
-			// } else {
-			// 	echo '[연결성공]<br>';
-			// }
-
 			// 2. DB 선택
 			@mysql_select_db($mysql_database, $connect) or die('DB 선택 실패');
 
@@ -125,7 +118,7 @@
 				printf("</div>\n");
 			printf("</div>\n");
 
-			$query = "SELECT * FROM Recipe WHERE Name LIKE '%".$keyword."%'";
+			$query = "SELECT * FROM Recipe WHERE Name LIKE '%".$keyword."%' order by rand() limit 15";
 			$count = "SELECT count(*) FROM Recipe WHERE Name LIKE '%".$keyword."%'";
 
 			//5. 쿼리 실행
@@ -133,6 +126,42 @@
 			$result = mysql_query($count) or die(mysql_error());
 			$row = mysql_fetch_row($result);
 			$total_no = $row[0];
+
+			// alpha - 로그인 한 사용자의 경우, 검색 기록 update 하기 
+			session_start();
+			if ( !isset($_SESSION['user_id']) ) {
+				//echo '로그인 해라';
+			}
+			else {
+				if ( intval($total_no) > 1 ) {
+					//echo '로그인 했구나';
+					$keyword_query = "SELECT SearchRecode FROM User WHERE Id LIKE '%".$_SESSION['user_id']."%'";
+					$keyword_result = mysql_query($keyword_query) or die(mysql_error());
+					$keyword_row = mysql_fetch_row($keyword_result);
+					$old_keyword = $keyword_row[0];
+
+					if ( $old_keyword == '' ) {
+
+						$new_keyword = sprintf("%s", $_GET['search']);
+					}
+					else {
+
+						$lk = explode(";",  $old_keyword);
+
+						if ( count($lk) >= 6 ) {
+
+							$old_keyword = sprintf("%s;%s;%s;%s;%s", $lk[0], $lk[1], $lk[2], $lk[3], $lk[4]);
+						}
+						$new_keyword = sprintf("%s;%s", $_GET['search'], $old_keyword);
+					}
+
+					
+
+					$query2  = "update User set SearchRecode= '".$new_keyword."' where Id LIKE '".$_SESSION['user_id']."'";
+					$result2 = mysql_query($query2);
+					//printf("<script type=\"text/javascript\"> alert(\"%s 를 검색기록에 등록\"); </script>", $_GET['search']);
+				}
+			}
 
 
 			//5.2 실제 검색
@@ -179,8 +208,9 @@
 			printf("</div>\n");
 
 
+			$tt = 0;
 
-			$query = "SELECT * FROM Recipe WHERE Category LIKE '%".$keyword."%'";
+			$query = "SELECT * FROM Recipe WHERE Category LIKE '%".$keyword."%' order by rand() limit 15 ";
 			$count = "SELECT count(*) FROM Recipe WHERE Category LIKE '%".$keyword."%'";
 
 			//5. 쿼리 실행
@@ -203,8 +233,8 @@
 				$name     = $row[1];
 				$url      = $row[2];
 				$img_url  = $row[3];
-				$elements =	str_replace(";", ", ", $row[4]);
-				$category =	str_replace(";", ", ", $row[5]);
+				$elements =	$row[4];
+				$category =	$row[5];
 
 				printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
 					printf("<div class=\"col-xs-4 col-sm-4 no-padding\">\n");
@@ -225,9 +255,9 @@
 				}
 			}
 
+			$tt = 0;
 
-
-			// 이번엔 테마검색
+			// 이번엔 재료검색
 			//4. 쿼리 생성
 			printf("<div class=\"col-lg-12 text-center\">\n");
 				printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
@@ -235,7 +265,7 @@
 				printf("</div>\n");
 			printf("</div>\n");
 
-			$query = "SELECT * FROM Recipe WHERE Element LIKE '%".$keyword."%'";
+			$query = "SELECT * FROM Recipe WHERE Element LIKE '%".$keyword."%' order by rand() limit 15";
 			$count = "SELECT count(*) FROM Recipe WHERE Element LIKE '%".$keyword."%'";
 
 			//5. 쿼리 실행
@@ -257,8 +287,8 @@
 				$name     = $row[1];
 				$url      = $row[2];
 				$img_url  = $row[3];
-				$elements =	str_replace(";", ", ", $row[4]);
-				$category =	str_replace(";", ", ", $row[5]);
+				$elements =	$row[4];
+				$category =	$row[5];
 
 				printf("<div class=\"col-xs-12 col-sm-12 no-padding\">\n");
 					printf("<div class=\"col-xs-4 col-sm-4 no-padding\">\n");
