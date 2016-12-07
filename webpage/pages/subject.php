@@ -49,7 +49,7 @@
 	<section class="no-padding" id="recommend">
 		<div class="col-xs-12 col-sm-12 orange">
 				</br>
-				<h3>주제 추천</h3>
+				<h3>주제 목록</h3>
 				</br>
 			</div>
 			<div class="col-xs-4 col-sm-4 red">

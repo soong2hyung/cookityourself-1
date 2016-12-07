@@ -48,15 +48,16 @@
 	<section id="searchbar" padding-top="50%">
 		<div class="container">
 			<h2 class="section-heading" align="center">레시피 검색</h2></br>
+			<h4 class="section-heading" align="center">원하시는 요리 재료, 요리명, 주제를 검색하세요!</h4></br>
 			<div class="col-sm-6 col-sm-offset-3">
-					<div class="input-group stylish-input-group">
-						<input type="text" class="form-control"  placeholder="레시피 검색" >
-						<span class="input-group-addon">
-							<button type="submit">
-								<span class="glyphicon glyphicon-search"></span>
-							</button>  
-						</span>
-					</div>
+				<div class="input-group stylish-input-group">
+					<input type="text" class="form-control"  placeholder="레시피 검색" >
+					<span class="input-group-addon">
+						<button type="submit">
+							<span class="glyphicon glyphicon-search"></span>
+						</button>  
+					</span>
+				</div>
 			</div>
 		</div>
 	</section>

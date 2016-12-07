@@ -48,7 +48,7 @@
 	<section class="no-padding" id="recommend">
 		<div class="container-fluid">
 			<div class="row no-gutter popup-gallery red">
-				<img src="../img/s1.png" class="col-xs-12 col-sm-12">
+				<a href="search.php?search=홍합"><img src="../img/s1.png" class="col-xs-12 col-sm-12">
 				<div class="col-xs-4 col-sm-4">
 					<a href="recipeview.php?Id=919" class="portfolio-box">
 						<img src="http://krcdn.ar-cdn.com/recipes/xlarge/998715b4-d0a3-48a9-b80d-f9bb7dc7bc40.jpg" class="img-responsive" width="100%" alt="">
@@ -86,7 +86,7 @@
 				</div>
 			</div>
 			<div class="row no-gutter popup-gallery orange">
-				<img src="../img/s2.png" class="col-xs-12 col-sm-12">
+				<a href="search.php?search=레몬"><img src="../img/s2.png" class="col-xs-12 col-sm-12">
 				<div class="col-xs-4 col-sm-4">
 					<a href="recipeview.php?Id=47" class="portfolio-box">
 						<img src="http://krcdn.ar-cdn.com/recipes/xlarge/e9f9f178-7628-46e2-906b-9f8d5016ae18.jpg" class="img-responsive" width="100%" alt="">
@@ -124,7 +124,7 @@
 				</div>
 			</div>
 			<div class="row no-gutter popup-gallery green">
-				<img src="../img/s3.png" class="col-xs-12 col-sm-12">
+				<a href="search.php?search=떡볶이"><img src="../img/s3.png" class="col-xs-12 col-sm-12">
 				<div class="col-xs-4 col-sm-4">
 					<h4>매콤한 떡볶이</h4>
 					<h4>고소한 치즈</h4>
